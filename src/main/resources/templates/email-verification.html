@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Подтверждение Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            background-color: #ffffff;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #3ca338;
+            margin-bottom: 20px;
+        }
+        .code {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            background-color: #e4efe3;
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            color: #1a1a1a;
+        }
+        .message {
+            font-size: 16px;
+            color: #333333;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="logo">Shop Service</div>
+
+    <h2>Подтверждение адреса электронной почты</h2>
+
+    <p class="message">
+        Чтобы подтвердить ваш адрес, введите следующий код:
+    </p>
+
+    <div class="code">
+        <span th:text="${code}">1234</span>
+    </div>
+
+    <p class="message">
+        Если вы не запрашивали этот код, просто проигнорируйте это письмо.
+    </p>
+
+    <div class="footer">
+        © 2025 Shop Service.
+    </div>
+</div>
+</body>
+</html>
