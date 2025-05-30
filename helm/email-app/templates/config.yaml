@@ -4,7 +4,7 @@ metadata:
   name: "{{ .Chart.Name }}-config"
 data:
   SPRING_APPLICATION_NAME: "{{ .Values.properties.application.name }}"
-  SPRING_KAFKA_BOOTSTRAP_SERVERS: "{{ .Values.properties.kafka.servers }}"
+  SPRING_KAFKA_BOOTSTRAP_SERVERS: "kafka-controller-0.kafka.svc.cluster.local:9092,kafka-controller-1.kafka.svc.cluster.local:9092,kafka-controller-2.kafka.svc.cluster.local:9092"
   EUREKA_INSTANCE_HOSTNAME: "{{ .Values.properties.application.eureka.hostname }}"
   EUREKA_INSTANCE_NON_SECURE_PORT: "{{ .Values.properties.application.port }}"
   EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: "http://{{ .Values.properties.eureka.host }}:{{ .Values.properties.eureka.port }}/eureka/"
