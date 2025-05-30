@@ -19,6 +19,7 @@ spec:
         - name: "{{ .Chart.Name }}"
           image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
           imagePullPolicy: IfNotPresent
+          command: ["sleep", "3600"]
           ports:
             - containerPort: 8080
               protocol: TCP
