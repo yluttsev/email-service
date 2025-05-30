@@ -1,0 +1,26 @@
+replicaCount: 1
+
+image:
+  name:
+  tag:
+
+secret:
+  name: "email-app-secret"
+  keys:
+    mailHost: "mailHost"
+    mailPort: "mailPort"
+    mailUsername: "mailUsername"
+    mailPassword: "mailPassword"
+
+properties:
+  application:
+    name: email-app
+    eureka:
+      hostname: email-app-service.email-app.svc.cluster.local
+    port: 8080
+  kafka:
+    hostname: kafka.kafka.svc.cluster.local
+    port: 9092
+  eureka:
+    host: eureka-server-service.eureka-server.svc.cluster.local
+    port: 8761

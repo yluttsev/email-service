@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "{{ .Chart.Name }}-config"
+data:
+  SPRING_APPLICATION_NAME: "{{ .Values.properties.application.name }}"
+  SPRING_KAFKA_BOOTSTRAP_SERVERS: "{{ .Values.properties.kafka.hostname }}:{{ .Values.properties.kafka.port }}"
+  EUREKA_INSTANCE_HOSTNAME: "{{ .Values.properties.application.eureka.hostname }}"
+  EUREKA_INSTANCE_NON_SECURE_PORT: "{{ .Values.properties.application.port }}"
+  EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: "http://{{ .Values.properties.eureka.host }}:{{ .Values.properties.eureka.port }}/eureka/"
