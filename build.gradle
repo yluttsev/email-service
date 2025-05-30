@@ -44,3 +44,5 @@ dependencyManagement {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+tasks.bootJar.archiveFileName = 'email-service.jar'
