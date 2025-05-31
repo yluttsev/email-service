@@ -32,7 +32,7 @@ spec:
                   name: "{{ .Values.secret.name }}"
                   key: "{{ .Values.secret.keys.mailHost }}"
 
-            - name: SPRING_MAIL_POST
+            - name: SPRING_MAIL_PORT
               valueFrom:
                 secretKeyRef:
                   name: "{{ .Values.secret.name }}"
