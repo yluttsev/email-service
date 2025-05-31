@@ -19,7 +19,7 @@ properties:
       hostname: email-app-service.email-app.svc.cluster.local
     port: 8080
   kafka:
-    servers: kafka-broker-0.kafka.svc.cluster.local:9092
+    servers: kafka.kafka.svc.cluster.local:9092
   eureka:
     host: eureka-server-service.eureka-server.svc.cluster.local
     port: 8761
